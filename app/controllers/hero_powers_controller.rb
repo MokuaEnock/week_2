@@ -5,5 +5,6 @@ class HeroPowersController < ApplicationController
   private
 
   def create_params
+    params.permit(:strength, :hero_id, :power_id)
   end
 end
