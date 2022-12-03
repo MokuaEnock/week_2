@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-put "Seeding heroes"
+puts "Seeding heroes"
 h1 = Hero.create(name: "Kamala Khan", super_name: "Ms. Marvel")
 h2 = Hero.create(name: "Doreen Green", super_name: "Squirrel Girl")
 h3 = Hero.create(name: "Gwen Stacy", super_name: "Spider-Gwen")
 
-put "Seeding powers"
+puts "Seeding powers"
 Power.create(
   name: "super strength",
   description: "gives the wielder super-human strengths",
