@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_03_041701) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_03_063642) do
   create_table "hero_powers", force: :cascade do |t|
     t.integer "hero_id"
     t.integer "power_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "strength"
     t.index ["hero_id"], name: "index_hero_powers_on_hero_id"
     t.index ["power_id"], name: "index_hero_powers_on_power_id"
   end

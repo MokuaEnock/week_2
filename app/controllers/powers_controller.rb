@@ -15,6 +15,7 @@ class PowersController < ApplicationController
     power = Power.find(params[:id])
     power.update!(post_params)
     render json: power
+    
   rescue ActiveRecord::RecordInvalid => invalid
     render json: {
              errors: invalid.record.errors
