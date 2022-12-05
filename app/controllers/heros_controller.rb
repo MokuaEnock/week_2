@@ -4,18 +4,18 @@ class HerosController < ApplicationController
               with: :render_unprocessable_entity_response
   def index
     heros = Hero.all
-    render json: heros
+    render json: heros, status: :ok
   end
 
   def show
     hero = Hero.find(params[:id])
-    render json: hero
+    render json: hero, status: :ok
   end
 
   private
 
   def render_not_found_response
-    render json: { error: "Restaurant not found" }, status: :not_found
+    render json: { error: "Hero not found" }, status: :not_found
   end
 
   def render_unprocessable_entity_response(invalid)
