@@ -15,7 +15,7 @@ class HeroPowersController < ApplicationController
   end
 
   def render_not_found_response
-    render json: { error: "Restaurant not found" }, status: :not_found
+    render json: { error: "Hero not found" }, status: :not_found
   end
 
   def render_unprocessable_entity_response(invalid)
