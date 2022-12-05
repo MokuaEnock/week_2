@@ -13,6 +13,12 @@ class PowersController < ApplicationController
     render json: power, status: :ok
   end
 
+  def update
+    power = Power.find(params[:id])
+    power.update!(post_params)
+    render json: power, status: :ok
+  end
+
   private
 
   def render_not_found_response
