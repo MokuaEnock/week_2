@@ -16,12 +16,7 @@ class PowersController < ApplicationController
   def update
     power = Power.find(params[:id])
     power.update!(post_params)
-    render json: power
-  rescue ActiveRecord::RecordInvalid => invalid
-    render json: {
-             errors: invalid.record.errors
-           },
-           status: :unprocessable_entity
+    render json: power, status: :ok
   end
 
   private
